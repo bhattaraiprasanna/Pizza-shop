@@ -1,0 +1,94 @@
+.menu {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .menu .menuTitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: #333;
+  }
+  
+  .menuList {
+    width: 70vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px; /* Adds space between grid items */
+    place-items: center;
+  }
+  
+  /* MENU ITEM STYLING */
+  .menuItem {
+    position: relative; /* Needed for positioning text at the bottom */
+    border-radius: 15px;
+    width: 300px;
+    height: 350px;
+    overflow: hidden; /* Ensures content stays inside the box */
+    margin: 20px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: #fff; /* Background for clean separation */
+  }
+  
+  .menuItem:hover {
+    transform: scale(1.05); /* Adds a subtle zoom effect */
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+  
+  .menuItem .image {
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .menuItem .details {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+  }
+  
+  .menuItem .details h1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    margin-top: auto; /* Pushes the text to the bottom */
+  }
+  
+  .menuItem .details p {
+    font-size: 16px;
+    color: #777;
+    text-align: center;
+    margin-top: 5px;
+  }
+  
+  /* For Responsive Design */
+  @media only screen and (max-width: 1300px) {
+    .menuList {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .menuList {
+      grid-template-columns: 1fr;
+    }
+  }
+  
